@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+  </head>
+  <body>
+  	<header>
+  		<h1>{{title}}</h1>
+  	</header>
+  	<nav>
+		  <span><a title="Home" href="/">HOME</a></span>
+      {{#if user}}
+        <span><a title="Register" href="/post">Tweet</a></span>
+        <span><a title="Login" href="/logout">LOGOUT</a></span>        
+      {{else}}
+		    <span><a title="Register" href="/login">LOGIN</a></span>
+		    <span><a title="Login" href="/reg">REGISTER</a></span>
+      {{/if}}
+	 </nav>
+    <article>
+      {{#if success}}
+          {{success}}
+      {{/if}}
+
+      {{#if error}}
+          {{error}}
+      {{/if}}
+
+    	{{{body}}}
+
